@@ -1,5 +1,6 @@
 import type { ButtonProps } from "./ButtonProps";
 import cx from "clsx";
+import "../../styles/tokens.css";
 import styles from "./Button.module.css";
 
 export function Button({

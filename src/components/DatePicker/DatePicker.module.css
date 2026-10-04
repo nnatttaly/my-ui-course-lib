@@ -1,0 +1,177 @@
+.root {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 6px;
+  /* Ширина под «ДД.ММ.ГГГГ» + две иконки, зависит от размера. Переопределяется через className. */
+  width: var(--date-picker-width);
+  font-family: var(--ui-font-family);
+  color: var(--ui-color-text);
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+/* --- Поле --- */
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding-right: 6px;
+  border: 1px solid var(--ui-color-border);
+  border-radius: var(--ui-radius-m);
+  background: var(--ui-color-bg);
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+.field:not(.disabled, .invalid):hover {
+  border-color: var(--ui-color-border-hover);
+}
+
+.field:focus-within,
+.field.open {
+  border-color: var(--ui-color-primary);
+  box-shadow: var(--ui-focus-ring);
+}
+
+.field.invalid {
+  border-color: var(--ui-color-danger);
+}
+
+.field.invalid:focus-within,
+.field.invalid.open {
+  box-shadow: var(--ui-focus-ring-danger);
+}
+
+.field.disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+  background: var(--ui-color-bg-hover);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  padding: 0 0 0 14px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+.input::placeholder {
+  color: var(--ui-color-placeholder);
+}
+
+.input:disabled {
+  cursor: not-allowed;
+}
+
+.s {
+  --date-picker-width: 176px;
+}
+
+.s .field {
+  height: var(--ui-height-s);
+}
+
+.s .input {
+  padding-left: 12px;
+  font-size: 14px;
+}
+
+.m {
+  --date-picker-width: 192px;
+}
+
+.m .field {
+  height: var(--ui-height-m);
+}
+
+.m .input {
+  font-size: 15px;
+}
+
+.l {
+  --date-picker-width: 208px;
+}
+
+.l .field {
+  height: var(--ui-height-l);
+}
+
+.l .input {
+  padding-left: 16px;
+  font-size: 16px;
+}
+
+.iconButton {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--ui-color-text-secondary);
+  cursor: pointer;
+}
+
+.iconButton:hover:not(:disabled) {
+  background: var(--ui-color-bg-hover);
+  color: var(--ui-color-text);
+}
+
+.iconButton:active:not(:disabled) {
+  background: var(--ui-color-bg-active);
+}
+
+.iconButton:disabled {
+  cursor: not-allowed;
+}
+
+.iconButton:focus-visible {
+  outline: var(--ui-focus-outline);
+  outline-offset: 1px;
+}
+
+.message {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: var(--ui-color-text-secondary);
+}
+
+.messageError {
+  color: var(--ui-color-danger);
+}
+
+/* --- Попап: рендерится в портал, координаты ставит usePopover --- */
+
+.popup {
+  position: fixed;
+  z-index: var(--ui-z-popup);
+  top: 0;
+  left: 0;
+  padding: 12px;
+  border: 1px solid var(--ui-color-border-subtle);
+  border-radius: var(--ui-radius-l);
+  background: var(--ui-color-bg);
+  box-shadow: var(--ui-shadow-popup);
+  font-family: var(--ui-font-family);
+  color: var(--ui-color-text);
+  cursor: default;
+}

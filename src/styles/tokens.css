@@ -1,0 +1,42 @@
+:root {
+  --ui-font-family: "Inter", sans-serif;
+
+  --ui-color-text: #17171b;
+  --ui-color-text-secondary: #6f717b;
+  --ui-color-text-muted: #8b8d98;
+  --ui-color-text-subtle: #b4b6bd;
+  --ui-color-text-disabled: #c9cbd1;
+  --ui-color-placeholder: #a9abb3;
+
+  --ui-color-bg: #ffffff;
+  --ui-color-bg-hover: #f4f4f5;
+  --ui-color-bg-active: #e7e7ea;
+
+  --ui-color-primary: #17171b;
+  --ui-color-primary-hover: #2d2d33;
+  --ui-color-primary-active: #050506;
+  --ui-color-on-primary: #ffffff;
+
+  --ui-color-border: #d4d5da;
+  --ui-color-border-hover: #a9abb3;
+  --ui-color-border-subtle: #e6e8ec;
+  --ui-color-divider: #f0f0f2;
+
+  --ui-color-danger: #e5484d;
+
+  --ui-focus-ring: 0 0 0 3px rgba(23, 23, 27, 0.08);
+  --ui-focus-ring-danger: 0 0 0 3px rgba(229, 72, 77, 0.15);
+  --ui-focus-outline: 2px solid var(--ui-color-primary);
+  --ui-shadow-popup:
+    0 12px 32px rgba(23, 23, 27, 0.12), 0 2px 6px rgba(23, 23, 27, 0.06);
+
+  --ui-radius-s: 8px;
+  --ui-radius-m: 10px;
+  --ui-radius-l: 14px;
+
+  --ui-height-s: 36px;
+  --ui-height-m: 44px;
+  --ui-height-l: 52px;
+
+  --ui-z-popup: 1000;
+}

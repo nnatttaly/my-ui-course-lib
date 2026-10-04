@@ -1,11 +1,11 @@
 .button {
   min-width: 140px;
-  border-radius: 10px;
-  font-family: "Inter", sans-serif;
+  border-radius: var(--ui-radius-m);
+  font-family: var(--ui-font-family);
   font-weight: 600;
   border: none;
   cursor: pointer;
-  color: #17171b;
+  color: var(--ui-color-text);
   background: transparent;
 }
 
@@ -17,57 +17,57 @@
 .s {
   padding: 0 16px;
   font-size: 14px;
-  height: 36px;
+  height: var(--ui-height-s);
 }
 
 .m {
   padding: 0 20px;
   font-size: 15px;
-  height: 44px;
+  height: var(--ui-height-m);
 }
 
 .l {
   padding: 0 24px;
   font-size: 16px;
-  height: 52px;
+  height: var(--ui-height-l);
 }
 
 .fill {
-  color: #ffffff;
-  background: #17171b;
+  color: var(--ui-color-on-primary);
+  background: var(--ui-color-primary);
 }
 
 .fill:hover:not(:disabled),
 .fill[data-state="hover"] {
-  background: #2d2d33;
+  background: var(--ui-color-primary-hover);
 }
 
 .fill:active:not(:disabled),
 .fill[data-state="active"] {
-  background: #050506;
+  background: var(--ui-color-primary-active);
 }
 
 .outline {
-  border: 1px solid #17171b;
-  background: #ffffff;
+  border: 1px solid var(--ui-color-primary);
+  background: var(--ui-color-bg);
 }
 
 .outline:hover:not(:disabled),
 .outline[data-state="hover"] {
-  background: #f4f4f5;
+  background: var(--ui-color-bg-hover);
 }
 
 .outline:active:not(:disabled),
 .outline[data-state="active"] {
-  background: #e7e7ea;
+  background: var(--ui-color-bg-active);
 }
 
 .text:hover:not(:disabled),
 .text[data-state="hover"] {
-  background: #f4f4f5;
+  background: var(--ui-color-bg-hover);
 }
 
 .text:active:not(:disabled),
 .text[data-state="active"] {
-  background: #e7e7ea;
+  background: var(--ui-color-bg-active);
 }

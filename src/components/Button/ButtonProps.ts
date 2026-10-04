@@ -1,8 +1,8 @@
 import type { ComponentProps } from "react";
-import type { VARIANTS, SIZES } from "./Button.constants";
+import type { VARIANTS } from "./Button.constants";
+import type { Size } from "../shared/sizes";
 
 export type Variant = (typeof VARIANTS)[number];
-export type Size = (typeof SIZES)[number];
 
 export interface ButtonProps extends ComponentProps<"button"> {
   variant?: Variant;
