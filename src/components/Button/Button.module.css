@@ -1,4 +1,8 @@
 .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   min-width: 140px;
   border-radius: 10px;
   font-family: "Inter", sans-serif;
@@ -9,7 +13,7 @@
   background: transparent;
 }
 
-.button:disabled {
+.button:is(:disabled, [aria-disabled="true"]) {
   cursor: not-allowed;
   opacity: 0.4;
 }
@@ -37,12 +41,12 @@
   background: #17171b;
 }
 
-.fill:hover:not(:disabled),
+.fill:hover:not(:disabled, [aria-disabled="true"]),
 .fill[data-state="hover"] {
   background: #2d2d33;
 }
 
-.fill:active:not(:disabled),
+.fill:active:not(:disabled, [aria-disabled="true"]),
 .fill[data-state="active"] {
   background: #050506;
 }
@@ -52,22 +56,22 @@
   background: #ffffff;
 }
 
-.outline:hover:not(:disabled),
+.outline:hover:not(:disabled, [aria-disabled="true"]),
 .outline[data-state="hover"] {
   background: #f4f4f5;
 }
 
-.outline:active:not(:disabled),
+.outline:active:not(:disabled, [aria-disabled="true"]),
 .outline[data-state="active"] {
   background: #e7e7ea;
 }
 
-.text:hover:not(:disabled),
+.text:hover:not(:disabled, [aria-disabled="true"]),
 .text[data-state="hover"] {
   background: #f4f4f5;
 }
 
-.text:active:not(:disabled),
+.text:active:not(:disabled, [aria-disabled="true"]),
 .text[data-state="active"] {
   background: #e7e7ea;
 }

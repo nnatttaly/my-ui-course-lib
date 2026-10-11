@@ -14,3 +14,10 @@
 .button-states th {
   height: 44px;
 }
+
+.polymorphic-demo {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 20px auto;
+}
