@@ -1,7 +1,7 @@
 import type { ElementType } from "react";
 import type { ButtonElement, ButtonProps } from "./ButtonProps";
 import cx from "clsx";
-import styles from "./Button.module.css";
+import { button } from "./Button.css";
 
 export function Button<E extends ButtonElement = "button">({
   as,
@@ -28,7 +28,7 @@ export function Button<E extends ButtonElement = "button">({
   return (
     <Component
       {...elementProps}
-      className={cx(styles.button, styles[variant], styles[size], className)}
+      className={cx(button({ variant, size }), className)}
     />
   );
 }

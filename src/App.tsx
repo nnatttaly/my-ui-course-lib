@@ -1,14 +1,22 @@
 import "./App.css";
 import { useRef } from "react";
 import { Button, SIZES, VARIANTS } from "./components/Button";
+import { useTheme } from "./theme";
 
 function App() {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const linkRef = useRef<HTMLAnchorElement>(null);
+  const { theme, setTheme } = useTheme();
 
   return (
     <>
       <div className="polymorphic-demo">
+        <Button
+          variant="outline"
+          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+        >
+          Тема: {theme}
+        </Button>
         <Button ref={buttonRef} onClick={() => linkRef.current?.focus()}>
           as="button"
         </Button>
@@ -52,7 +60,7 @@ function App() {
                   </Button>
                 </td>
                 <td>
-                  <Button variant={variant} size={size} disabled >
+                  <Button variant={variant} size={size} disabled>
                     Кнопка
                   </Button>
                 </td>
