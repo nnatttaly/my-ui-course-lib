@@ -9,6 +9,8 @@ export function Button<E extends ButtonElement = "button">({
   size = "s",
   disabled,
   className,
+  icon,
+  children,
   ...restProps
 }: ButtonProps<E>): React.ReactNode {
   const Component = (as ?? "button") as ElementType;
@@ -28,7 +30,13 @@ export function Button<E extends ButtonElement = "button">({
   return (
     <Component
       {...elementProps}
-      className={cx(button({ variant, size }), className)}
-    />
+      className={cx(
+        button({ variant, size, withIcon: Boolean(icon) }),
+        className,
+      )}
+    >
+      {icon && <span aria-hidden="true">{icon}</span>}
+      {children}
+    </Component>
   );
 }

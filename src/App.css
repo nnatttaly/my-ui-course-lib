@@ -17,7 +17,71 @@
 
 .polymorphic-demo {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 16px;
   margin: 20px auto;
+}
+
+.calendar-demo,
+.button-demo {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.calendar-demo h1,
+.button-demo h2 {
+  margin: 0 0 24px;
+  font-size: 28px;
+}
+
+.calendar-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-block-end: 28px;
+}
+
+.calendar-controls label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.calendar-controls select {
+  padding: 8px;
+  border-radius: 6px;
+  font: inherit;
+  color: inherit;
+  background: inherit;
+}
+
+.calendar-example {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.calendar-notes {
+  flex: 1 1 240px;
+  max-width: 440px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.calendar-notes p:first-child {
+  margin-block-start: 0;
+}
+
+.calendar-events {
+  min-height: 100px;
+  padding-inline-start: 20px;
+}
+
+.button-states-scroll {
+  overflow-x: auto;
 }

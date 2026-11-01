@@ -1,4 +1,4 @@
-import type { ComponentPropsWithRef } from "react";
+import type { ComponentPropsWithRef, ReactNode } from "react";
 import type { VARIANTS, SIZES } from "./Button.constants";
 
 export type Variant = (typeof VARIANTS)[number];
@@ -10,8 +10,8 @@ interface ButtonOwnProps<E extends ButtonElement> {
   variant?: Variant;
   size?: Size;
   disabled?: boolean;
+  icon?: ReactNode;
 }
 
 export type ButtonProps<E extends ButtonElement = "button"> =
-  ButtonOwnProps<E> &
-    Omit<ComponentPropsWithRef<E>, keyof ButtonOwnProps<E>>;
+  ButtonOwnProps<E> & Omit<ComponentPropsWithRef<E>, keyof ButtonOwnProps<E>>;

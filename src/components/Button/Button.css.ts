@@ -68,6 +68,12 @@ export const button = recipe({
     },
   },
   variants: {
+    withIcon: {
+      true: {
+        minWidth: 0,
+        gap: vars.button.icon.gap,
+      },
+    },
     variant: {
       fill: variant(vars.button.fill),
       outline: variant(vars.button.outline),
@@ -79,6 +85,15 @@ export const button = recipe({
       l: size(vars.button.size.l),
     },
   },
+  compoundVariants: [
+    {
+      variants: { withIcon: true },
+      style: {
+        paddingInlineStart: vars.button.icon.paddingStart,
+        paddingInlineEnd: vars.button.icon.paddingEnd,
+      },
+    },
+  ],
   defaultVariants: { variant: "fill", size: "s" },
 });
 
